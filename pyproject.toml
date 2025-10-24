@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "list-subnets"
+version = "0.1.0"
+description = "A CLI tool to list /24 subnets from a CSV file of IPs"
+authors = [
+    { name = "Luke Lauterbach" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+dependencies = [
+    "impacket",
+    "dnspython",
+    "pycryptodome"
+]
+
+[project.scripts]
+list-subnets = "ad2subnets.AD2Subnets:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
