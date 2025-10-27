@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.scripts]
-list-subnets = "ad2subnets.AD2Subnets:main"
+ad2subnets = "ad2subnets.AD2Subnets:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
